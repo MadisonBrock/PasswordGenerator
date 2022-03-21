@@ -1,0 +1,80 @@
+/* Star Selector(selects every element in the HTML file) */
+*{
+    /* Includes the padding and border when setting a width or height for an element  */
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #6495ed;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    /* flex box is used here to center a div with id of "container" vertically & horizontally */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Setting the heigh to 100vh so the div will be centered vertically in the browser window */
+    height: 100vh;
+    /* Adding padding to the body element, the div container is NOT right up against edge of viewport */
+    padding: 25px;
+}
+
+h2{
+    /* top left/right bottom */
+    margin: 10px 0 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.btn{
+    background-color: #6495ed;
+    /* removes the default button border */
+    border: none;
+    /* buttons do NOT inherit text color. Must apply  */
+    color: #eef1ef;
+    /* changes the cursor when hovering over a button */
+    cursor: pointer;
+    padding: 8px 12px ;
+}
+
+.option{
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+}
+
+#container{
+    background-color: gray;
+    padding: 15px;
+    width: 350px;
+    border-radius: 15px;
+}
+#result-container{
+    background-color: black;
+    height: 50px;
+    letter-spacing: 1px;
+    font-size: 18px;
+    padding: 10px 5px 10px 10px;
+    /* flexbox used to position the span and button element */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+#clipboard{
+    font-size: 20px;
+    
+}
+
+#generate{
+    font-size: 16px;
+    width: 100%;
+    text-transform: uppercase;
+}
+
+/* changes font size of generated password for small screen sizes */
+@media(max-width: 400px){
+    #result-container{
+        font-size: 14px;
+    }
+}

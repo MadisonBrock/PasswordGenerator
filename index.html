@@ -6,12 +6,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="JavaScript Password Generator">
     <meta name="Author" content="Madison Brock">
+
+    <!-- Links to Open Sans Google Font(Regular 400 & Bold 700) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Madison's Personal Font Awesome Kit Link -->
+    <script src="https://kit.fontawesome.com/18dc460d4b.js" crossorigin="anonymous"></script>
+
     <!-- Link to CSS file -->
     <link rel="stylesheet" href="style.css">
+
     <title>Password Generator</title>
 </head>
 <body>
-    
+    <div id="container">
+        <h2>Password Generator</h2>
+        <section id="result-container">
+            <!-- This span is where the password will be displayed  -->
+            <span id="result"></span>
+            <button id="clipboard" class="btn">
+                <!--  -->
+                <i class="fa-light fa-clipboard"></i>
+            </button>
+        </section>
+
+        <!-- Options Section -->
+        <section id="options">
+            <div class="option">
+                <label for="lowercase">Lowercase Letters</label>
+                <input type="checkbox" checked id="lowercase">
+            </div>
+            <div class="option">
+                <label for="uppercase">Uppercase Letters</label>
+                <input type="checkbox" checked id="uppercase">
+            </div>
+            <div class="option">
+                <label for="numbers">Numbers </label>
+                <input type="checkbox" checked id="numbers">
+            </div>
+            <div class="option">
+                <label for="symbols">Symbols </label>
+                <input type="checkbox" checked id="symbols">
+            </div>
+            <div class="option">
+                <label for="length">Length</label>
+                <!-- Value is the starting/default number. Also min/max sets to the range  -->
+                <input type="number" value="10" min="4" max="20" id="length">
+            </div>
+        </section>
+
+
+
+        <button id="btn" class="generate">Generate Password</button>
+    </div>
 
 
 
